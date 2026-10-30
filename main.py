@@ -53,3 +53,5 @@ while escolha != 0:
             break
 
 print('Programa encerrado com sucesso!')
+
+# Projeto IndustrialLog - versão inicial
