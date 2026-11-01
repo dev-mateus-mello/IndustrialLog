@@ -55,3 +55,5 @@ while escolha != 0:
 print('Programa encerrado com sucesso!')
 
 # Projeto IndustrialLog - versão inicial
+
+# Funcionalidade em desenvolvimento: consulta por responsável
