@@ -1,6 +1,9 @@
 from time import sleep
 from datetime import datetime
 
+NOME_SISTEMA = 'IndustrialLog'
+VERSAO = "0.1.0-alpha"
+
 escolha = 5
 
 def registrar_ocorrencias():
@@ -31,16 +34,20 @@ def consultar_historico():
             print(historico)
             sleep(1)
 
+def exibir_versao():
+    print(f'{NOME_SISTEMA} - Versão: {VERSAO}')
+    sleep(1)
+
 while escolha != 0:
     try:
-        print('=== IndustrialLog ===\n\n')
-        escolha = int(input('1- Registrar ocorrência\n2- Consultar histórico\n0- Sair do programa\n'))
+        print(f'=== {NOME_SISTEMA} ===\n\n')
+        escolha = int(input('1- Registrar ocorrência\n2- Consultar histórico\n3- Exibir versão\n0- Sair do programa\n'))
         sleep(1)
     except ValueError:
         print('Digite apenas números!')
         continue
     else:
-        if escolha not in (0, 1, 2):
+        if escolha not in (0, 1, 2, 3):
             print('Função não encontrada, tente novamente!')
             sleep(1)
             continue
@@ -48,6 +55,8 @@ while escolha != 0:
             registrar_ocorrencias()
         elif escolha == 2:
             consultar_historico()
+        elif escolha == 3:
+            exibir_versao()
         else:
             sleep(1)
             break
