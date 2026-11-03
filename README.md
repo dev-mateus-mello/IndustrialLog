@@ -12,6 +12,7 @@ O IndustrialLog é um projeto de portfólio que busca facilitar o registro e a c
 - Registro de ocorrências.
 - Identificação do responsável pelo registro.
 - Consulta do histórico de ocorrências.
+- Exibição de versão do sistema
 
 ## Tecnologias utilizadas
 
