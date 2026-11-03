@@ -33,3 +33,7 @@ python main.py
 ## Status do projeto
 
 Em desenvolvimento.
+
+## Autor
+
+Desenvolvido por Mateus Mello.
