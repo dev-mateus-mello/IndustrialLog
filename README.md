@@ -36,6 +36,12 @@ python main.py
 
 Em desenvolvimento.
 
+## Versão Atual
+
+**0.1.1-alpha**
+
+O IndustrialLog encontra-se em desenvolvimento ativo. Novas funcionalidades, melhorias e correções estão sendo implementadas progressivamente.
+
 ## Autor
 
 Desenvolvido por Mateus Mello.
