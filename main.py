@@ -1,19 +1,27 @@
 from datetime import datetime
 
 NOME_SISTEMA = 'IndustrialLog'
-VERSAO = "0.1.0-alpha"
+VERSAO = "0.1.1-alpha"
 
 escolha = 5
 
 def registrar_ocorrencias():
+    ocorrencia = input('Descreva a ocorrência: ').strip()
+    while ocorrencia == '':
+        ocorrencia = input('O campo não pode estar vazio!\nDescreva a ocorrência: ').strip()
+    responsavel = input('Responsável pelo registro: ').strip()
+    while responsavel == '':
+        responsavel = input('O campo não pode estar vazio!\nResponsável pelo registro: ').strip()
     agora = datetime.now()
     data = agora.strftime('%d/%m/%Y')
     hora = agora.strftime('%H:%M:%S')
-    ocorrencia = input('Descreva a ocorrência: ')
-    responsavel = input('Responsável pelo registro: ')
-    with open('ocorrencia.txt', 'a', encoding='utf-8') as arquivo:
-        arquivo.write(f'Ocorrência: {ocorrencia}\nData: {data}\nHora: {hora}\nResponsavel: {responsavel}\n\n')
-        print('\nocorrencia registrada com sucesso!')
+    try:
+        with open('ocorrencia.txt', 'a', encoding='utf-8') as arquivo:
+            arquivo.write(f'Ocorrência: {ocorrencia}\nData: {data}\nHora: {hora}\nResponsavel: {responsavel}\n\n')
+    except OSError:
+        print('\nFalha ao registrar a ocorrência!')
+    else:
+        print('\nOcorrência registrada com sucesso!')
 
 def consultar_historico():
     try:
@@ -85,5 +93,3 @@ while escolha != 0:
 print('\nPrograma encerrado com sucesso!')
 
 # Projeto IndustrialLog - versão inicial
-
-# Feature consulta por responsável concluida com sucesso.
